@@ -1,4 +1,5 @@
 import StoreIcon from "@/assets/icons/StoreIcon";
+import { useTransactionsContext } from "@/context/transactionsContext/useTransactionsContext";
 import type { Transaction } from "@/models/transaction.model";
 import styled from "@emotion/styled";
 
@@ -19,6 +20,17 @@ interface CardTransactionProps {
 const CardTransaction = (props: CardTransactionProps) => {
     const { transaction } = props;
 
+    // Context
+    const { paymentMethods } = useTransactionsContext();
+
+    const transformPaymentMethod = (value: string) => {
+        const method = paymentMethods.find(
+            (method) => method.value.toString() === value.toString()
+        );
+
+        return method ? method.label : value;
+    };
+
     return (
         <Card className="card-transaction">
             <LeftContainer>
@@ -27,7 +39,9 @@ const CardTransaction = (props: CardTransactionProps) => {
                 </Icon>
                 <Col alignItems="flex-start">
                     <Text fs="0.875rem" fw="600" color="#313643">
-                        {transaction?.paymentMethod}
+                        {transformPaymentMethod(
+                            transaction?.paymentMethod || ""
+                        )}
                     </Text>
                     <Text fs="0.875rem" fw="100" color="606882">
                         Venta
