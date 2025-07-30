@@ -29,13 +29,8 @@ const FiltersTransactions = (props: FiltersTransactionsProps) => {
 
     // Context
     const { cardData, paymentMethods } = useTransactionsContext();
-    const {
-        filters,
-        activeFilters,
-        setActiveFilters,
-        setRangeDate,
-    } = useFiltersContext();
-
+    const { filters, activeFilters, setActiveFilters, setRangeDate } =
+        useFiltersContext();
 
     // Hooks
     const { handleFilterChange, clearChipFilters, handleRangeFilter } =
@@ -190,14 +185,14 @@ const FiltersTransactions = (props: FiltersTransactionsProps) => {
                     </SwitchWrapper>
                 </Body>
             </Wrapper>
-            <Footer>
-                <CustomButton
-                    title="Aplicar filtros"
-                    variant="primary"
-                    onClick={handleShowFilters}
-                    fullWidth
-                />
-            </Footer>
+                <Footer showFilters={showFilters}>
+                    <CustomButton
+                        title="Aplicar filtros"
+                        variant="primary"
+                        onClick={handleShowFilters}
+                        fullWidth
+                    />
+                </Footer>
         </Container>
     );
 };
@@ -278,20 +273,23 @@ const SwitchWrapper = styled.div`
     }
 `;
 
-const Footer = styled.div`
+const Footer = styled.div<FiltersStyleProps>`
     width: 542px;
     position: fixed;
     bottom: 0;
     lef: 0;
     right: 0;
+    right: ${(props) => (props.showFilters ? "0" : "-100vw")};
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 35.5px;
-    
+
     @media (max-width: 768px) {
         width: 100%;
         padding: 10px;
         box-shadow: none;
     }
+
+    transition: all 0.3s ease-in-out;
 `;
