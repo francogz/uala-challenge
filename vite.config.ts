@@ -10,6 +10,12 @@ export default defineConfig({
             "@pages": path.resolve(__dirname, "./src/pages"),
         },
     },
+    // @ts-expect-error - Vitest configuration
+    test: {
+        globals: true,
+        environment: 'jsdom',
+        setupFiles: './src/test/setup.ts',
+    },
   //   server: {
   //   proxy: {
   //     '/api': {
