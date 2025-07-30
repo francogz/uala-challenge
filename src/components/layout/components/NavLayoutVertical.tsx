@@ -132,4 +132,5 @@ const DownloadWrapper = styled.div<stylesProps>`
     overflow: hidden;
     transition: height 0.3s ease-in-out;
     place-content: end;
+    margin-bottom: 20px;
 `;
