@@ -23,6 +23,7 @@ const CardTransaction = (props: CardTransactionProps) => {
     // Context
     const { paymentMethods } = useTransactionsContext();
 
+    // Functions
     const transformPaymentMethod = (value: string) => {
         const method = paymentMethods.find(
             (method) => method.value.toString() === value.toString()
