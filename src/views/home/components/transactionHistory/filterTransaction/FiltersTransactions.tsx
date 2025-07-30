@@ -231,8 +231,8 @@ const Wrapper = styled.div<FiltersStyleProps>`
     overflow-y: auto;
 
     @media (max-width: 768px) {
-        margin-top: 70px;
-        padding: 20px 20px 105px 20px;
+        margin-top: 56px;
+        padding: 20px 20px 125px 20px;
         width: ${(props) => (props.showFilters ? "100%" : "0")};
         box-shadow: none;
         height: 100%;
@@ -280,7 +280,7 @@ const SwitchWrapper = styled.div`
 
 const Footer = styled.div`
     width: 542px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     lef: 0;
     right: 0;
@@ -288,10 +288,10 @@ const Footer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 35.5px;
-
+    
     @media (max-width: 768px) {
         width: 100%;
-        padding: 20px;
+        padding: 10px;
         box-shadow: none;
     }
 `;

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import BtnGP from "@/assets/google-play-button.png";
-import BtnAS from "@/assets/app-store-button.png";
+import BtnGP from "@/assets/google-play-button.svg";
+import BtnAS from "@/assets/app-store-button.svg";
 
 const DownloadAppBtns = () => {
     return (

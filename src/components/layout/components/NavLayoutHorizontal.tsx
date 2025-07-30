@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import LogoHorizontal from "@/assets/uala-isotipo-horizontal.png";
+import LogoHorizontal from "@/assets/uala-isotipo-horizontal.svg";
 import Nav from "./Nav";
 import DownloadAppBtns from "./DownloadAppBtns";
 

@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
-
+import Simbolo from "@/assets/simbolo.svg";
 const SplashScreen = () => {
     return (
         <Wrapper>
-            <h1>Loading...</h1>
+            <img src={Simbolo} alt="Uala Logo" />
         </Wrapper>
     );
 };

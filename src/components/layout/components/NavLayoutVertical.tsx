@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import MenuIcon from "@/assets/icons/MenuIcon";
-import LogoSimple from "@/assets/logo-uala.png";
+import LogoSimple from "@/assets/logo-uala.svg";
 import { useState } from "react";
 import Nav from "./Nav";
 import DownloadAppBtns from "./DownloadAppBtns";
