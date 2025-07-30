@@ -16,10 +16,4 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f0f0f0;
-
-    h1 {
-        font-size: 2rem;
-        color: #333;
-    }
 `;
