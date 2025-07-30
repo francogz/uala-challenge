@@ -6,7 +6,7 @@ export const transactionsApi = createApi({
     reducerPath: "transactionsApi",
     baseQuery: fetchBaseQuery({
         // baseUrl: "https://uala-dev-challenge.s3.us-east-1.amazonaws.com/",
-        baseUrl: "/src/mock",
+        baseUrl: "/mock",
     }),
     endpoints: (builder) => ({
         getTransactions: builder.query<TransactionData, void>({

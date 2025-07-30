@@ -10,13 +10,13 @@ export default defineConfig({
             "@pages": path.resolve(__dirname, "./src/pages"),
         },
     },
-    server: {
-    proxy: {
-      '/api': {
-        target: 'https://uala-dev-challenge.s3.us-east-1.amazonaws.com',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
-  }
+  //   server: {
+  //   proxy: {
+  //     '/api': {
+  //       target: 'https://uala-dev-challenge.s3.us-east-1.amazonaws.com',
+  //       changeOrigin: true,
+  //       rewrite: (path) => path.replace(/^\/api/, '')
+  //     }
+  //   }
+  // }
 });
