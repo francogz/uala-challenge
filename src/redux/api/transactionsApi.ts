@@ -5,7 +5,8 @@ import { transactionAdapter } from "@/adapters/transaction.adapter";
 export const transactionsApi = createApi({
     reducerPath: "transactionsApi",
     baseQuery: fetchBaseQuery({
-        baseUrl: "https://uala-dev-challenge.s3.us-east-1.amazonaws.com/",
+        // baseUrl: "https://uala-dev-challenge.s3.us-east-1.amazonaws.com/",
+        baseUrl: "/src/mock",
     }),
     endpoints: (builder) => ({
         getTransactions: builder.query<TransactionData, void>({
