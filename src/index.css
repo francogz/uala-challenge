@@ -1,0 +1,115 @@
+:root {
+    font-family: "Public Sans", sans-serif;
+    line-height: 18px;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --text-dark: #313643;
+}
+
+a {
+    text-decoration: inherit;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fafbfb;
+    min-height: 100vh;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.main {
+    width: 100%;
+    overflow: auto;
+    height: calc(100vh - 80px);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        height: auto;
+        margin-top: 90px;
+    }
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.rdp-root {
+    --rdp-accent-color: #032a9b !important;
+    --rdp-accent-background-color: #e7efff !important;
+}
+
+.rdp-range_end {
+    --rdp-day_button-border-radius: 0 8px 8px 0 !important;
+}
+
+.rdp-range_start {
+    --rdp-day_button-border-radius: 8px 0 0 8px !important;
+}
+
+.rdp-range_middle {
+    font-weight: normal !important;
+}
+
+.rdp-weekday {
+    color: #3a3a3a;
+}
+
+.rdp-caption_label .rdp-chevron {
+    display: none !important;
+}
+
+.rdp-month_caption {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.rdp-dropdowns {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    font-family: public-sans, sans-serif !important;
+}
+
+.rdp-button_previous {
+    position: absolute !important;
+    left: 0 !important;
+    z-index: 2 !important;
+}
+.rdp-button_next {
+    position: absolute !important;
+    right: 0 !important;
+    z-index: 2 !important;
+}
+
+.rdp-nav {
+    width: 100% !important;
+}
